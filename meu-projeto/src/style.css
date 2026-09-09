@@ -1,0 +1,118 @@
+body {
+  background-color: #000000;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 24px 12px 48px;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.titulo-1 {
+  font-size: 42px;
+  color: white;
+  margin: 8px 0 28px;
+  text-shadow: 0 0 18px rgba(255, 255, 255, 0.15);
+}
+
+.moldura {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100%;
+}
+
+.boneco-svg {
+  display: block;
+  height: 170px;
+  width: auto;
+  overflow: visible;
+  filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.5));
+}
+
+.svg-pequeno {
+  height: 150px;
+}
+
+.svg-grande {
+  height: 172px;
+}
+
+/* pivôs de rotação usados pelas poses, em unidades do viewBox de cada boneco */
+.svg-pequeno .corpo {
+  transform-origin: 80px 203px;
+}
+
+.svg-pequeno .braco-arma {
+  transform-origin: 112px 98px;
+}
+
+.svg-grande .corpo {
+  transform-origin: 110px 232px;
+}
+
+.svg-grande .braco-arma {
+  transform-origin: 172px 92px;
+}
+
+/* ---------- Texto e botões ---------- */
+
+.paragrafo {
+  color: #c9c4da;
+  margin: 18px 0 6px;
+  font-size: 15px;
+  min-height: 20px;
+}
+
+.acoes {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.botao-acao {
+  background-color: #29243a;
+  color: white;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid #4a4363;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    transform 0.12s ease,
+    background-color 0.15s ease;
+}
+
+.botao-acao:hover:not(:disabled) {
+  background-color: #3a3352;
+  transform: translateY(-1px);
+}
+
+.botao-acao:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.botao-acao:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.botao-atacar {
+  border-color: #7a3b3b;
+}
+
+.botao-defender {
+  border-color: #2f5a86;
+}
+
+.botao-curar {
+  border-color: #3a7a45;
+}
