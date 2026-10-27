@@ -1,0 +1,13 @@
+import express from "express";
+
+const app = express();
+
+app.get("/api/pessoa/:id", (req, res) => {
+  const id = req.params.id;
+
+  res.send({ message: `Id da pessoa: ${id} ` });
+});
+
+app.listen(3000, () => {
+  console.log("Servidor rodando em http://localhost:3000");
+});
